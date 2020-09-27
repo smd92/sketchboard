@@ -1,13 +1,17 @@
 const grid = document.querySelector("#grid");
 
-function createGrid(rows, cols) {
-    grid.style.setProperty('--grid-rows', rows);
-    grid.style.setProperty('--grid-cols', cols);
-    for (i = 0; i < (rows * cols); i++) {
-        let div = document.createElement("div");
-        div.innerText = (div + 1);
-        grid.appendChild(div).className = "grid-item";
+function createGrid() {
+    for (let i = 0; i < 16; i++) {
+        let row = document.createElement("div");
+        row.className = "row";
+        for (let j = 0; j < 16; j++) {
+            let box = document.createElement("div");
+            box.className = "box";
+            box.innerText = 1;
+            row.appendChild(box);
+        }
+        grid.appendChild(row);      
     }
 }
 
-createGrid(4, 4);
+createGrid();
