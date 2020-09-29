@@ -9,14 +9,21 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: 100px 1fr 100px;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 150px 150px 1fr 150px 150px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    ". . ."
-    ". board ."
-    ". . .";
+    ". . . buttons ."
+    ". . board . ."
+    ". . . . ."
+    ". . . . .";
     width: 100vw;
     height: 100vh;
+}
+
+#buttons {
+    grid-area: buttons;
+    align-self: center;
+    justify-self: center;
 }
 
 #grid {

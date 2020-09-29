@@ -1,4 +1,6 @@
 const grid = document.querySelector("#grid");
+const resetBtn = document.querySelector("#resetBtn");
+window.onload = createGrid(16,16);
 
 function createGrid(columns, rows) {
 
@@ -18,12 +20,21 @@ function createGrid(columns, rows) {
 
     //add event listener to every .box
 
-    let boxes = document.querySelectorAll(".box");
-    boxes.forEach((boxes) => {
-        boxes.addEventListener("mouseenter", () => {
-            boxes.style.backgroundColor = "black";
+    const boxesInit = document.querySelectorAll(".box");
+    boxesInit.forEach((boxesInit) => {
+        boxesInit.addEventListener("mouseenter", () => {
+            boxesInit.style.backgroundColor = "black";
         })
     })
 }
 
-createGrid(16, 16);
+resetBtn.addEventListener("click", () => {
+    let userInput = prompt("Please enter the number of columns/rows for your new grid (e.g. 64 will create a 64x64 grid)");
+
+    const boxesUser = document.querySelectorAll(".box");
+    boxesUser.forEach((boxesUser) => {
+        boxesUser.style.backgroundColor = "";
+    })
+
+    createGrid(userInput, userInput);
+})
