@@ -30,11 +30,10 @@ function createGrid(columns, rows) {
 
 resetBtn.addEventListener("click", () => {
     let userInput = prompt("Please enter the number of columns/rows for your new grid (e.g. 64 will create a 64x64 grid)");
+    
+while (grid.firstChild) {
+    grid.removeChild(grid.firstChild);
+}
 
-    const boxesUser = document.querySelectorAll(".box");
-    boxesUser.forEach((boxesUser) => {
-        boxesUser.style.backgroundColor = "";
-    })
-
-    createGrid(userInput, userInput);
+createGrid(userInput, userInput);
 })
