@@ -86,6 +86,19 @@ createGrid(userInput, userInput);
 addFade();
 })
 
+let fadeCount = 0;
+function countFade() {
+    if (fadeCount <= 10) {
+        fadeCount++;
+    }
+
+    else {
+        fadeCount = 0;
+        fadeCount++;
+    }
+    return fadeCount / 10;
+}
+
 //add event listener for fade effect to every .box
 function addFade() {
 
@@ -93,19 +106,15 @@ function addFade() {
 
     boxes.forEach((boxes) => {
         boxes.style.backgroundColor = "black";
-        let opacityStr = "0";
-        boxes.style.opacity = opacityStr;
+        let opacityValue = 0;
+        boxes.style.opacity = opacityValue;
 
         boxes.addEventListener("mouseenter", () => {
-            for (let i = 0; i < 10; i++) {
-                boxes.addEventListener("mouseenter", () => {
-                    let value = i / 10;
-                    let pass = value.toString();
-                    boxes.style.opacity = opacityStr + pass;
-                })
-            }
+            let fadeValue = countFade();
+            let valueNum = fadeValue + opacityValue;
+            let valueStr = valueNum.toString();
+            boxes.style.opacity = valueStr;
         })
     })
 }
-
 
