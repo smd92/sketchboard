@@ -52,14 +52,22 @@ while (grid.firstChild) {
 }
 
 createGrid(userInput, userInput);
+addRandomColor();
 })
 
-//add event listener for random background color to every .box
+//add event listener for generating and adding random background color to every .box
 function addRandomColor() {
+
     const boxes = document.querySelectorAll(".box");
+    
     boxes.forEach((boxes) => {
+        let r = Math.floor(Math.random() * (255 - 0 + 1) ) + 0;
+        let g = Math.floor(Math.random() * (255 - 0 + 1) ) + 0;
+        let b = Math.floor(Math.random() * (255 - 0 + 1) ) + 0;
+        let randomColorString = "rgb(" + r + "," + g + "," + b + ")";
+
         boxes.addEventListener("mouseenter", () => {
-            boxes.style.backgroundColor = "black";
+            boxes.style.backgroundColor = randomColorString;
         })
     })
 }

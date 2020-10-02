@@ -10,20 +10,28 @@ body {
 #container {
     display: grid;
     grid-template-columns: 150px 150px 1fr 150px 150px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 50px 50px 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    ". . . buttons ."
-    ". . board . ."
     ". . . . ."
+    ". . board resetBtn ."
+    ". . . magicMode ."
     ". . . . .";
     width: 100vw;
     height: 100vh;
 }
 
-#buttons {
-    grid-area: buttons;
+#resetBtn {
+    grid-area: resetBtn;
     align-self: center;
     justify-self: center;
+}
+
+#magicMode {
+    grid-area: magicMode;
+    align-self: center;
+    justify-self: center;
+    background-color: #7fd82b;
+    background-image: linear-gradient(319deg, #7fd82b 0%, #ef4063 37%, #e557c6 100%);
 }
 
 #grid {
@@ -39,4 +47,10 @@ body {
 
 .box {
     border: solid 1px;
+    border-color: #d9ddd7;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
 }
