@@ -31,8 +31,8 @@ body {
     grid-template-columns: repeat(var(--columns), 1fr);
     grid-template-rows: repeat(var(--rows), 1fr);
     justify-self: center;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     border: solid;
     grid-area: board;
 }
