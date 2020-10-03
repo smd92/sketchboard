@@ -86,19 +86,6 @@ createGrid(userInput, userInput);
 addFade();
 })
 
-let fadeCount = 0;
-function countFade() {
-    if (fadeCount <= 10) {
-        fadeCount++;
-    }
-
-    else {
-        fadeCount = 0;
-        fadeCount++;
-    }
-    return fadeCount / 10;
-}
-
 //add event listener for fade effect to every .box
 function addFade() {
 
@@ -110,11 +97,63 @@ function addFade() {
         boxes.style.opacity = opacityValue;
 
         boxes.addEventListener("mouseenter", () => {
-            let fadeValue = countFade();
-            let valueNum = fadeValue + opacityValue;
+            let valueNum = 0.1 + opacityValue;
             let valueStr = valueNum.toString();
             boxes.style.opacity = valueStr;
+
+                boxes.addEventListener("mouseenter", () => {
+                    let valueNum = (2 / 10) + opacityValue;
+                    let valueStr = valueNum.toString();
+                    boxes.style.opacity = valueStr;
+
+                    boxes.addEventListener("mouseenter", () => {
+                        let valueNum = (3 / 10) + opacityValue;
+                        let valueStr = valueNum.toString();
+                        boxes.style.opacity = valueStr;
+
+                        boxes.addEventListener("mouseenter", () => {
+                            let valueNum = (4 / 10) + opacityValue;
+                            let valueStr = valueNum.toString();
+                            boxes.style.opacity = valueStr;
+
+                            boxes.addEventListener("mouseenter", () => {
+                                let valueNum = (5 / 10) + opacityValue;
+                                let valueStr = valueNum.toString();
+                                boxes.style.opacity = valueStr;
+
+                                boxes.addEventListener("mouseenter", () => {
+                                    let valueNum = (6 / 10) + opacityValue;
+                                    let valueStr = valueNum.toString();
+                                    boxes.style.opacity = valueStr;
+
+                                    boxes.addEventListener("mouseenter", () => {
+                                        let valueNum = (7 / 10) + opacityValue;
+                                        let valueStr = valueNum.toString();
+                                        boxes.style.opacity = valueStr;
+
+                                        boxes.addEventListener("mouseenter", () => {
+                                            let valueNum = (8 / 10) + opacityValue;
+                                            let valueStr = valueNum.toString();
+                                            boxes.style.opacity = valueStr;
+
+                                            boxes.addEventListener("mouseenter", () => {
+                                                let valueNum = (9 / 10) + opacityValue;
+                                                let valueStr = valueNum.toString();
+                                                boxes.style.opacity = valueStr;
+
+                                                boxes.addEventListener("mouseenter", () => {
+                                                    let valueNum = (10 / 10) + opacityValue;
+                                                    let valueStr = valueNum.toString();
+                                                    boxes.style.opacity = valueStr;
+                                                })
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
         })
     })
 }
-

@@ -51,11 +51,6 @@ body {
     grid-area: board;
 }
 
-.box {
-    border: solid 1px;
-    border-color: #d9ddd7;
-}
-
 .button {
     width: 100px;
     height: 30px;
