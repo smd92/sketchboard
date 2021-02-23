@@ -1,5 +1,7 @@
 # sketchboard
-DOM manipulation excercise from https://www.theodinproject.com/: creating a sketchboard
-
+This project is part of the curriculum at https://www.theodinproject.com/
+# Lessons learned
+- CSS variables
+- DOM manipulation
 # Live Demo
 https://smd92.github.io/sketchboard
